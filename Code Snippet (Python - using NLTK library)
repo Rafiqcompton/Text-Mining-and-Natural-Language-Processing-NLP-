@@ -1,0 +1,16 @@
+     import nltk
+     from nltk.tokenize import word_tokenize
+     from nltk.corpus import stopwords
+     from nltk.sentiment import SentimentIntensityAnalyzer
+
+     # Tokenization
+     text = "This is an example sentence."
+     tokens = word_tokenize(text)
+
+     # Stopword Removal
+     stop_words = set(stopwords.words("english"))
+     filtered_tokens = [token for token in tokens if token.lower() not in stop_words]
+
+     # Sentiment Analysis
+     sid = SentimentIntensityAnalyzer()
+     sentiment_scores = sid.polarity_scores(text)
