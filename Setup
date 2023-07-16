@@ -1,0 +1,1 @@
+Install NLTK library using pip install nltk and download required resources using nltk.download().
